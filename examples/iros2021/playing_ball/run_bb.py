@@ -16,7 +16,7 @@ from somo.sm_actuator_definition import SMActuatorDefinition
 from somo.sm_link_definition import SMLinkDefinition
 from somo.sm_joint_definition import SMJointDefinition
 from somo.sm_continuum_manipulator import SMContinuumManipulator
-
+from environments.InHandManipulation import InHandManipulation #added by vitoria
 from somo.utils import load_constrained_urdf
 
 import sorotraj
@@ -94,6 +94,9 @@ p.changeDynamics(ballId, -1, lateralFriction=1)  # set ball friction
 ### Create and load the manipulator / arm
 # load the manipulator definition
 arm_manipulator_def = SMManipulatorDefinition.from_file("definitions/bb_arm.yaml")
+
+#creating the In Hand manipulator
+in_hand_manipulator_def = InHandManipulation()
 
 # create the arm manipulator...
 arm = SMContinuumManipulator(arm_manipulator_def)
