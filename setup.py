@@ -4,11 +4,11 @@ from setuptools import setup
 # https://stackoverflow.com/questions/47676721/register-an-internal-package-on-pypi
 
 setup(
-    name="somo",
+    name="somo_fork_vitoria",
     version=open("somo/_version.py").readlines()[-1].split()[-1].strip("\"'"),
     description="A light framework for the simulation of continuum manipulators",
     long_description="",
-    url="git@github.com:GrauleM/somo",
+    url="git@github.com:vitoriarlima/somo_fork_vitoria",
     author="Moritz A. Graule",
     author_email="moritz@graule.ch",
     license="unlicense",
